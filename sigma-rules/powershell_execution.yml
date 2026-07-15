@@ -1,0 +1,26 @@
+title: PowerShell Execution Detection
+id: 7a2b3c4d-1111-2222-3333-444455556666
+status: experimental
+description: Detects execution of PowerShell on Windows systems.
+author: Chaitanya
+date: 2026-07-15
+logsource:
+product: windows
+category: process_creation
+
+detection:
+selection:
+Image|endswith: '\powershell.exe'
+condition: selection
+
+falsepositives:
+
+* Legitimate administrative activity
+* System management scripts
+
+level: medium
+
+tags:
+
+* attack.execution
+* attack.t1059.001
