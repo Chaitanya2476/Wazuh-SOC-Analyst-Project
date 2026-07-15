@@ -1,0 +1,28 @@
+title: Suspicious Process Creation
+id: ad5e6f70-4444-5555-6666-777788889999
+status: experimental
+description: Detects execution of potentially suspicious command interpreters.
+author: Chaitanya
+date: 2026-07-15
+logsource:
+product: windows
+category: process_creation
+
+detection:
+selection:
+Image|endswith:
+- '\powershell.exe'
+- '\cmd.exe'
+condition: selection
+
+falsepositives:
+
+* Administrative activity
+* System maintenance tasks
+
+level: medium
+
+tags:
+
+* attack.execution
+* attack.t1059
