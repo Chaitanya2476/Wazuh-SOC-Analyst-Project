@@ -1,0 +1,27 @@
+title: Multiple Failed Windows Login Attempts
+id: 9c4d5e6f-3333-4444-5555-666677778888
+status: experimental
+description: Detects failed Windows logon attempts that may indicate brute-force activity.
+author: Chaitanya
+date: 2026-07-15
+logsource:
+product: windows
+service: security
+
+detection:
+selection:
+EventID: 4625
+condition: selection
+
+falsepositives:
+
+* User entering incorrect passwords
+* Expired credentials
+* Service account authentication failures
+
+level: medium
+
+tags:
+
+* attack.credential_access
+* attack.t1110
