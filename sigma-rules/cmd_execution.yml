@@ -1,0 +1,26 @@
+title: Windows Command Shell Execution Detection
+id: 8b3c4d5e-2222-3333-4444-555566667777
+status: experimental
+description: Detects execution of the Windows Command Prompt.
+author: Chaitanya
+date: 2026-07-15
+logsource:
+product: windows
+category: process_creation
+
+detection:
+selection:
+Image|endswith: '\cmd.exe'
+condition: selection
+
+falsepositives:
+
+* Administrative activity
+* IT support scripts
+
+level: medium
+
+tags:
+
+* attack.execution
+* attack.t1059.003
