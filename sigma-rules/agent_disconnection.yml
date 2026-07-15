@@ -1,0 +1,28 @@
+title: Wazuh Agent Disconnection Detection
+id: be6f7081-5555-6666-7777-888899990000
+status: experimental
+description: Detects when a Wazuh agent becomes disconnected from the manager.
+author: Chaitanya
+date: 2026-07-15
+logsource:
+product: wazuh
+service: agent
+
+detection:
+keywords:
+- disconnected
+- inactive
+condition: keywords
+
+falsepositives:
+
+* System maintenance
+* Network outages
+* Planned endpoint shutdown
+
+level: medium
+
+tags:
+
+* attack.defense_evasion
+* attack.t1562
