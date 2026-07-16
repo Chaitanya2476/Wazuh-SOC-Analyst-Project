@@ -1,5 +1,10 @@
 # Wazuh SOC Analyst Project
 
+![Wazuh](https://img.shields.io/badge/Wazuh-SIEM-blue)
+![Python](https://img.shields.io/badge/Python-Automation-yellow)
+![Windows](https://img.shields.io/badge/Windows-Endpoint-blue)
+![SOC](https://img.shields.io/badge/SOC-Analyst-green)
+
 ## Project Overview
 
 This project demonstrates the deployment and use of a Security Information and Event Management (SIEM) platform using Wazuh for security monitoring, log analysis, and threat detection. The lab simulates a SOC environment where security events are collected, analyzed, and investigated.
